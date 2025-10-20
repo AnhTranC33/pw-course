@@ -1,0 +1,4 @@
+git init: Khởi tạo git, các file di chuyển vào Working Directory
+git add <file_name>: Add 1 file với file name: <file_name> vào Staging Area
+git add .: Add tất cả các file còn ở Working Directory vào Staging Area
+git commit -m “message”: Add các file từ Staging Area vào Repository
