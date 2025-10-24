@@ -1,0 +1,9 @@
+Giải thích các câu lệnh: 
+git commit --amend: Thay đổi message commit
+
+git commit --amend -m ”<message>”: Thay đổi commit với 1 messsage mới: "<message>"
+
+git restore --staged <file>: Restore/revert 1 file cụ thể <file> đã được add (bằng git add) trước ra khỏi staging area, về lại
+working directory
+
+git reset HEAD~1: revert lại commit gần nhất trước current commit
