@@ -11,19 +11,15 @@ test('register with full information', async ({ page }) => {
     await page.getByRole('link', { name: /Bài học 3: ToDo Page/i }).click();
   });
 
-
   // Add 100 todo items with content: "Todo <i>"
-
   await test.step('3. Add 100 todo items with content Todo <i> ', async () => {
-    let countTodo = 1;
     let countDelTodo = 1;
 
     page.on('dialog', async dialog => dialog.accept());
 
-    while (countTodo <= 100) {
-      await page.locator('//input[@id="new-task"]').fill(`Todo ${countTodo}`);
+    for (let i = 1; i <= 100; i++) {
+      await page.locator('//input[@id="new-task"]').fill(`Todo ${i}`);
       await page.locator('//button[@id="add-task"]').click();
-      countTodo++;
     }
 
     while (countDelTodo <= 100) {

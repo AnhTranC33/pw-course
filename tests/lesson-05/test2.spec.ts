@@ -14,13 +14,11 @@ test('register with full information', async ({ page }) => {
 
   // Add products to cart:
   //Product 1: 2, Product 2: 3, Product 3: 1
-  await test.step('3. Add Product 1: 2 products, Product 2: 3 products, Product 3: 1 product ', async () => {
-    let countProd1 = 1;
+  await test.step('3. Add Product 1: 2 products, Product 2: 3 products, Product 3: 1 product', async () => {
     let countProd2 = 1;
 
-    while (countProd1 <= 2) {
+    for (let i = 1; i <= 2; i++) {
       await page.locator('//button[@data-product-id=1]').click();
-      countProd1++;
     }
 
     while (countProd2 <= 3) {
